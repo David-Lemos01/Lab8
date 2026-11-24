@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resultado</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+  <main class="container">
+    <section class="card">
+      <div class="logo"><%= sucesso ? '✓' : '!' %></div>
+
+      <% if (sucesso) { %>
+        <h1 class="sucesso">Sucesso</h1>
+        <p class="subtitle"><%= status %></p>
+        <p class="footer-text">Bem-vindo, <strong><%= usuario %></strong></p>
+      <% } else { %>
+        <h1 class="erro">Erro</h1>
+        <p class="subtitle"><%= status %></p>
+      <% } %>
+
+      <a href="/login">Ir para Login</a> | <a href="/">Projetos</a>
+    </section>
+  </main>
+
+</body>
+</html>
